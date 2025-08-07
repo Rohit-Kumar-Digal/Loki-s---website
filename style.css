@@ -1,0 +1,209 @@
+:root{
+    --base-color:#ffffff;
+    --text-color:#000000;
+    --primary-color: rgb(46, 236, 32);
+    --secondary-color: violet;
+    --color-1:#f9f6f3;
+    --color-2:#f3f7f9;
+    --color-3:#f6f3f9;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--base-color);
+}
+
+h1, h2{
+    font-family:sans-serif;
+    color: var(--primary-color);
+}
+.loki-img{
+    height: 300px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position:bottom;
+}
+nav{
+    margin: 1em auto 3em auto;
+    width: min(1000px,100%);
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+.nav-links li:first-child {
+   margin-right: auto;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+   font-weight: bold;
+
+}
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 5px;
+}
+.nav-links a:hover{
+    background-color: rgb(59, 228, 53);
+    border: 1px solid white;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+header, section{
+    margin: 2em auto;
+    width: min(75em,100%);
+    background-color: var(--color-1);
+    padding: min(2em,15%);
+    border-radius: 1em;
+}
+.head-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+.text-container{
+    flex : 0 1 34em;
+    text-align: center;
+}
+.text-container h1{
+    font-size: 2.5rem;
+}
+.text-container p{
+    margin: .75em 0 1.25em 0;
+    font-size: 1.25em;
+} 
+.head-btn{
+    margin:20px 40px 0 0;
+}   
+.one{
+    display: inline-block;
+    background-color:rgb(59, 228, 53) ;
+    color:var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+.two{
+    display: inline-block;
+    background-color:rgb(104, 72, 233) ;
+    color:var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+.head-btn:hover{
+   /* text-decoration: underline; */
+    /* background-color:rgb(59, 228, 53) ; */
+    /* font-size: 20px; */
+    color: var(--color-1);
+    scale: 1.05;
+}
+.loki-img-2{
+    height: 300px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+}
+.aura{
+    text-align: center;
+}
+.aura-moves{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 4(1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img-1 img-1 img-2 img-3"
+    "img-1 img-1 img-4 img-5";
+    gap: 1em;
+}
+.aura-moves img{
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+    transition: 100ms ease;
+}
+.aura-moves img:hover{
+    scale: 1.05;
+}
+#Aboutme {
+    text-align: center;
+}
+details{
+    margin-top: 1em;
+    background-color: var(--base-color);
+    border-radius: 1em;
+}
+details summery{
+   padding: 1em;
+   font-size: 1.7rem;
+   font-family:sans-serif;
+}
+details p{
+    padding: 0 2em 2em 2em;
+}
+footer{
+    background-color:var(--base-color);
+    text-align: center;
+}
+footer a{
+    padding:10px;
+    color: rgb(89, 89, 235);
+    text-decoration: none;
+}
+footer a:hover{
+    margin: auto;
+    text-decoration: underline;
+}
+@media(max-widht:990px){
+    header{
+        text-align: center;
+    }
+    header.text-container{
+        padding-top: 0;
+    }
+}
+@media(max-width:640px){
+    nav li{
+        display:none;
+    }
+    nav li:first-child,
+    nav li:last-child{
+     display: block;
+    }
+    header{
+        margin-top: 0;
+    }
+    .head-btn{
+           margin-top: 0.5em;
+           width: 100%;
+    }
+    .aura-moves{
+        display: flex;
+        flex-direction: column;
+    }
+    .text-container{
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+}
